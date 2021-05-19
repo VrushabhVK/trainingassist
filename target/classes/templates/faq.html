@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+#myInput1 {
+	/* background-image: url('/css/searchicon.png'); */
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: -webkit-fill-available;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	/* border: 1px solid rgb(230, 230, 230); */
+	background-color: rgba(192, 192, 192, 0);
+	margin-bottom: 40px;
+	border-radius: 20px;
+	border: none;
+	border-bottom: solid gray;
+	outline: none;
+	color: rgb(0, 0, 0);
+	font-style: inherit;
+}
+
+#myUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myUL li a {
+	/* border: 1px solid #ddd; */
+	border: none;
+	border-radius: 40px;
+	/* margin-top: -1px; */
+	/* Prevent double borders */
+	/* background-color:yellow; */
+	padding: 12px;
+	text-decoration: none;
+	font-size: 1.5vw;
+	color: black;
+	display: block
+}
+
+/* #myUL li {
+            background-color: red;
+        } */
+.head {
+	border-radius: 20px 20px 5px 5px;
+	background-color: gray;
+	margin-bottom: 10px;
+}
+
+.head h2 {
+	/* padding: auto;
+            padding-left: 25px; */
+	margin: auto;
+	padding-left: 20px;
+}
+
+#myUL li a:hover:not(.header) {
+	/* background-color: #eee; */
+	background-color: rgba(0, 0, 0, 0.76);
+	color: rgb(0, 247, 255);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+a:link {
+	text-decoration: none;
+}
+
+#myUl1 {
+	/* background-color: red   ; */
+	width: auto;
+}
+
+#myUl1 li {
+	
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
+	{
+	color: #fff;
+	background-color: #00f7ff;
+}
+
+/* html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        } */
+
+/* body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind', sans-serif;
+            background: rgb(255, 255, 255);
+            color: #4d5974;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 100vh;
+            /* background-image: url("https://cdn.pixabay.com/photo/2016/11/30/12/09/question-mark-1872634__340.jpg"); */
+/* 
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        } */
+* /
+	/* 
+        .container {
+            margin: 0 auto;
+            padding: 4rem;
+            width: 48rem;
+        } */
+
+        h3 {
+	font-size: 1.75rem;
+	color: #373d51;
+	padding: 1.3rem;
+	margin: 0;
+}
+
+.accordion a {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	/* width: 100%; */
+	padding: 1rem 3rem 1rem 1rem;
+	color: #7288a2;
+	font-size: 1.15rem;
+	font-weight: 400;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover, .accordion a:hover::after {
+	cursor: pointer;
+	color: cyan;
+}
+
+.accordion a:hover::after {
+	border: 1px solid c yan;
+}
+
+.accordion a.active {
+	border-bottom: 1px solid #ff5353;
+	background-color: #a8a8a8;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.accordion a::after {
+	font-family: 'FontAwesome';
+	content: '\f078';
+	position: absolute;
+	float: right;
+	right: 1rem;
+	font-size: 1rem;
+	color: #010d1b;
+	padding: 5px;
+	width: 1.5vw;
+	height: 1.5vw;
+	/* align-self: center; */
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid #010d1b;
+	text-align: center;
+}
+
+.accordion a.active::after {
+	font-family: 'FontAwesome';
+	content: '\f077';
+	background-color: rgb(0, 235, 235);
+}
+
+.accordion .content {
+	opacity: 0;
+	padding: 0 1rem;
+	max-height: 0;
+	border-bottom: 1px solid #e5e5e5;
+	overflow: hidden;
+	clear: both;
+	-webkit-transition: all 0.2s ease 0.15s;
+	-o-transition: all 0.2s ease 0.15s;
+	transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+	font-size: 1.5vw;
+	font-weight: 300;
+}
+
+.accordion .content.active {
+	opacity: 1;
+	padding: 1rem;
+	max-height: 100%;
+	-webkit-transition: all 0.35s ease 0.15s;
+	-o-transition: all 0.35s ease 0.15s;
+	transition: all 0.35s ease 0.15s;
+}
+
+.accordion {
+	background: rgba(0, 0, 0, 0.425);
+	color: rgb(19, 18, 18);
+	border: none;
+}
+
+li a h2 {
+	color: rgb(0, 0, 0);
+}
+
+.cat {
+	margin-bottom: 20px;
+}
+
+.accordion {
+	margin: 10px;
+}
+
+.accordion-item {
+	border: none;
+}
+
+.accordion-item p {
+	text-align: justify;
+	line-height: 1.6;
+}
+
+#roow {
+	width: 100%;
+	float: left;
+}
+
+#sidemenu {
+	position: inline-block;
+	width: 30%;
+	float: left;
+}
+
+#faq {
+	width: 90%;
+	position: inline-block;
+	padding: 0;
+	margin: auto;
+	float: right;
+}
+
+#sidemenu ul li {
+	/* border: 1px solid #000; */
+	background-color: #a8a8a8;
+	margin-top: 5px;
+	width: 100%;
+	/* border-radius: 20px; */
+}
+
+#sidemenu ul {
+	list-style: none;
+	margin-top: 20px;
+	left: 0px;
+}
+
+#sidemenu ul li h4 {
+	color: #000;
+	font-style: normal;
+	margin: auto;
+	padding: 5px;
+	padding-left: 20px;
+}
+
+@media ( max-width : 600px) {
+	#sidemenu {
+		/* position: inline-block; */
+		width: 100%;
+		/* float: left; */
+		display: none;
+		align-items: center;
+		margin: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#faq {
+		width: 100%;
+		/* position: inline-block; */
+		padding: 0;
+		margin-left: auto;
+		align-items: center;
+		/* float: right; */
+	}
+	#faq h1 {
+		text-align: center;
+		padding-top: 25px;
+	}
+}
+
+#faq h1 {
+	text-align: center;
+	padding-top: 25px;
+}
+
+/* .container h1 {
+            color: #ffffff;
+            text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+                0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+                0 0 40px #A5F1FF;
+            font-size: 50PX;
+        } */
+
+/* main */
+.container {
+	width: 100%;
+	margin: auto;
+}
+
+/* main end */
+body {
+	position: relative;
+}
+
+ul.nav-pills {
+	top: 20px;
+	position: fixed;
+}
+
+div.col-sm-9 div {
+	height: 250px;
+	font-size: 28px;
+}
+
+#section1 {
+	color: #fff;
+	background-color: #1E88E5;
+}
+
+#section2 {
+	color: #fff;
+	background-color: #673ab7;
+}
+
+#section3 {
+	color: #fff;
+	background-color: #ff9800;
+}
+
+#section41 {
+	color: #fff;
+	background-color: #00bcd4;
+}
+
+#section42 {
+	color: #fff;
+	background-color: #009688;
+}
+
+@media screen and (max-width: 810px) {
+	#section1, #section2, #section3, #section41, #section42 {
+		margin-left: 150px;
+	}
+}
+
+/* ---------------------CSS Of PopUP------------------- */
+.popup .popuptext {
+	visibility: hidden;
+	width: 300px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	/* left: 30%; */
+	margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {from { opacity:0;
+	
+}
+
+to {
+	opacity: 1;
+}
+
+}
+@keyframes fadeIn {from { opacity:0;
+	
+}
+
+to {
+	opacity: 1;
+}
+
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: 75%;
+}
+/* @media (max-width: 768px){
+      .popup{
+        font-size: 1rem;
+        text-align: center;
+      }
+      .popup .popuptext{
+        
+			width: 300px;
+			
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			/* left: 30%; 
+      margin-right: 400px;
+      }
+    }*/
+/* @media (max-width: 458px){
+      .popup{
+        font-weight: 10px;
+      }
+    } */
+
+/* add btn  */
+.fixed_button {
+	position: fixed;
+	bottom: 10px;
+	/* margin-left: 405px; */
+	border: 0px solid #d6d6d6;
+	border-radius: 50%;
+	margin-left: 10px;
+	/* z-index: 99; */
+	padding: 0;
+	text-align: left;
+	margin-bottom: 3px;
+	left: 0;
+}
+
+.btn-circle.btn-xl {
+	/* position: fixed; */
+	width: 50px;
+	height: 60px;
+	/* padding: 10px 16px; */
+	border-radius: 50%;
+	font-size: 45px;
+	text-align: center;
+	left: 0;
+}
+/*--------------- CSS For Nav ----------------*/
+#nav {
+	margin: 27px auto 0;
+	width: 90%;
+	position: relative;
+	width: 590px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+
+#nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+#nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+#nav a:nth-child(1) {
+	width: 25%;
+}
+
+#nav a:nth-child(2) {
+	width: 25%;
+}
+
+#nav a:nth-child(3) {
+	width: 25%;
+}
+
+#nav a:nth-child(4) {
+	width: 25%;
+}
+
+.nav1 nav .start-ategory, a:nth-child(1):hover ~.animation {
+	width: 25%;
+	left: 0%;
+	background-color: #1abc9c;
+}
+
+.nav1 nav .start-question, a:nth-child(2):hover ~.animation {
+	width: 25%;
+	left: 25%;
+	background-color: #1abc9c;
+}
+
+.nav1 nav .start-answer, a:nth-child(3):hover ~.animation {
+	width: 25%;
+	left: 50%;
+	background-color: #1abc9c;
+}
+
+.nav1 nav .start-action, a:nth-child(4):hover ~.animation {
+	width: 25%;
+	left: 75%;
+	background-color: #1abc9c;
+}
+
+/* -----------------css for form------------ */
+.modal {
+	width: 100%;
+	margin: auto;
+}
+
+.modal-dialog {
+	width: 100%;
+	margin: auto;
+}
+
+.modal-content {
+	/* width: 150%; */
+	width: 100%;
+}
+
+.modal-header h2 {
+	margin-right: auto;
+}
+
+.modal-header {
+	margin-bottom: 10px;
+}
+
+/* -----------------CSS For Category-------------- */
+.form-container {
+	background: #fff;
+	width: 600px;
+	height: 500px;
+	position: relative;
+	text-align: center;
+	margin: auto;
+	padding: 20px 0;
+	box-shadow: 0 0 20px 0px rgb(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.form-control {
+	margin: auto;
+	width: 90%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sel {
+	width: auto;
+	height: 40px;
+	margin-bottom: 5px;
+	margin-left: 1%;
+	background-color: #a8a8a8;
+	margin-top: 5px;
+}
+
+.form-container span {
+	font-weight: bold;
+	padding: 0 10px;
+	color: #555;
+	cursor: pointer;
+	width: 100px;
+	display: inline-block;
+}
+
+.form #Btn {
+	display: inline-block;
+}
+
+.form-container form {
+	max-width: 800px;
+	padding: 0 20px;
+	position: absolute;
+	top: 130px;
+	transition: transform .1s;
+}
+
+form input {
+	width: 100%;
+	height: 30px;
+	margin: 10px 0;
+	padding: 0 10px;
+	border: 1px solid #ccc;
+}
+
+form #Btn {
+	width: 90%;
+	border: none;
+	cursor: pointer;
+	margin: 10px 0;
+}
+/* form #Btn:focus{
+        outline: none;
+    } */
+#category {
+	left: 0;
+}
+
+#question {
+	left: 800px;
+}
+
+#answer {
+	left: 900px;
+}
+
+#action {
+	left: 1400px;
+}
+
+#Indicator {
+	width: 100px;
+	border: none;
+	background: #a8a8a8;
+	height: 3px;
+	margin-top: 8px;
+	transform: translateX(100px);
+	transition: transform 1s;
+}
+
+#sel1 {
+	width: auto;
+	height: 40px;
+	margin-bottom: 5px;
+	margin-left: 1%;
+	background-color: #a8a8a8;
+	margin-top: 5px;
+}
+
+#sel2 {
+	width: auto;
+	height: 40px;
+	margin-bottom: 5px;
+	margin-left: 1%;
+	background-color: #a8a8a8;
+	margin-top: 5px;
+}
+
+.form-control1 {
+	margin: auto;
+	width: 500px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#Btn1 {
+	width: 90%;
+	border: none;
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+.form_group {
+	padding-top: 50px;
+}
+
+.content .panel {
+	padding: 2px;
+	margin: auto;
+	margin-top: 5px;
+	text-align: center;
+	background-color: #a8a8a8;
+	border-radius: 15px;
+	width: 50%;
+	height: fit-content;
+
+	/* border: solid 1px #489eff; */
+}
+
+.flip {
+	/* padding: 5px; */
+	text-align: center;
+	height: fit-content;
+	background-color: black;
+	border-radius: 15px;
+	width: 20%;
+	color: white;
+	margin: auto;
+	/* border: solid 1px #489eff; */
+}
+
+.panel {
+	padding: 50px;
+	display: none;
+}
+
+.form {
+	margin: auto;
+	padding: 0;
+	width: 35%;
+}
+
+#question {
+	margin: auto;
+	padding: 0px;
+	width: 90%;
+}
+
+#question .form-control1 {
+	margin: auto;
+	margin-top: 10px;
+	margin-left: 5px;
+	border-radius: 10px;
+	outline: none;
+}
+
+#question #Btn1 {
+	width: 50%;
+}
+
+#RemBtn {
+	padding: 0;
+	width: fit-content;
+	/* display: grid; */
+	outline: none;
+	margin: auto;
+}
+
+#delcat{
+margin-top:90px;
+}
+#category{
+margin-top: 100px;
+}
+</style>
+
+<title>Document</title>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 container ">
+		<!-- <div class="row " id="roow"> -->
+		<!-- <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-3 fixed-top" id="sidemenu">
+            <nav class="" id="myScrollspy">
+                <ul class="nav flex-column   nav-pills nav-stacked" id="myUl1">
+                    <li class="active"><a href="#orders">Orders</a></li>
+                    <li><a href="#payment">Payments</a></li>
+                    <li><a href="#invoice">Invoice</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#shipping">Shipping</a></li>
+
+                </ul>
+                </li>
+                </ul>
+            </nav>
+            
+        </div> -->
+		<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12   offset-sm-6"
+			id="faq">
+			<div class="header">
+				<a href="/faq"><h1>FAQs & FACs</h1> <br></a>
+				<div class="search">
+					<input type="text" id="myInput1" onkeyup="myFunction1()"
+						placeholder="Search for FAQs & FACs.." title="Type in a name">
+				</div>
+			</div>
+
+
+			<div class="list">
+				<ul id="myUL">
+
+					<th:block th:each="category : ${category}">
+						<li>
+							
+							<a class="head" id="${category.catid}">
+								<h2 th:text="${category.CategoryName}"></h2>
+							</a>
+							
+							<div class="accordion" th:each="qaa : ${qaa}" >
+								<div class="accordion-item" th:if="${category.catid==qaa.refId}">
+									<a class="que"  th:text="${qaa.Question}" ></a>
+									<div class="content">
+										<p  th:text="${qaa.Answer}"></p>
+
+										<div class="flip" th:onclick="'javascript:myFunction11(' + ${qaa.id} + ')'">Action!!!</div>
+										<div class="panel" th:id="${qaa.id}" th:text="${qaa.Action}">
+										</div>
+									</div>
+								</div>
+							</div>
+									
+						</li>
+					</th:block>
+
+
+
+
+
+
+
+				</ul>
+				<div class="fixed_button">
+					<button type="button" data-toggle="modal" data-target="#mymodal"
+						class="btn btn-secondary btn-circle btn-xl" onclick="cat()">+</button>
+
+				</div>
+
+			</div>
+			<div class="modal" id="mymodal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="form-container">
+							<div class="modal-header">
+								<h2>Add</h2>
+								<button class="close" type="button" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="form-btn">
+								<span onclick="cat()">Category</span> <span onclick="que()">Question</span>
+								<!-- <span onclick="ans()">Answer</span>
+                        <span onclick="ac()">Action</span> -->
+								<hr onclick="ind()" id="Indicator">
+							</div>
+							<!-- 		<form id="category" class="form" action="/add_Category"
+								method="post">
+								<div class="form_group">
+									<select id="sel" name="category">
+										<option value="">------</option>
+										<option th:each="category : ${category}"
+											th:text="${category.CategoryName}" />
+									</select>
+									 <button id="RemBtn" class="btn btn-primary me-md-6" type="button" onclick = "getConfirmation()">Remove</button>
+									
+									 <input type="text" id="myInput2" class="form-control"
+										placeholder="Add Category" name="cat">
+									<button id="Btn" class="btn btn-primary me-md-6" type="submit">ADD</button>
+
+
+								</div>
+							</form> -->
+
+
+							<!-- <form id="category" class="form" action="/del_Category"
+								method="post">
+								<div class="form_group">
+									<select id="sel" name="category">
+										<option value="">------</option>
+										<option th:each="category : ${category}"
+											th:value="${category.catid}"
+											th:text="${category.CategoryName}" />
+									</select>
+									<button id="RemBtn" class="btn btn-primary me-md-6"
+										type="submit" onclick="getConfirmation()">Remove</button>
+
+									<input type="text" id="myInput2" class="form-control"
+										placeholder="Add Category" name="cat">
+
+
+
+								</div>
+							</form> -->
+
+									<form id="category" class="form" action="/add_Category"
+								method="post">
+								<div class="form_group">
+								
+									 <input type="text" id="myInput2" class="form-control"
+										placeholder="Add Category" name="cat">
+									<button id="Btn" class="btn btn-primary me-md-6" type="submit">ADD</button>
+
+
+								</div>
+							</form>
+							
+							<form id="delcat" name="category" class="form" action="/del_Category">
+							<select id="sel" name="category" action="/del_Category">
+										<option value="">------</option>
+										<option th:each="category : ${category}" th:value="${category.catid}"
+											th:text="${category.CategoryName}" />
+									</select>
+									 <button id="RemBtn" class="btn btn-primary me-md-6"  type="submit" onclick = "getConfirmation()">Remove</button>
+									
+							</form>
+							
+
+
+
+							<form id="question" class="form" action="/add_Qaa">
+								<div class="form_group">
+									<select id="sel2"  name="category" action="/sel_Category">
+										
+										<option  th:each="category : ${category}" th:value="${category.catid}"
+											th:text="${category.CategoryName}" />
+											
+											
+									</select>									<!------------------- Question Dropdown ------------->
+									<!-- <select id="sel1"  name="qaa" onclick="drop()">
+										<th:block th:field="category">
+										<option value="order">Choose Question</option>
+										
+										<option th:if="${2==qaa.refId}"  th:each="qaa : ${qaa}" th:value="${qaa.refId}"
+											th:text="${qaa.Question}" />
+											</th:block>
+									</select> -->
+									<!------------------Question Input------------------------>
+									<input name="qes" type="text" id="myInput3" class="form-control1"
+										placeholder="Enter Question?">
+									<!--------------------Answer--------------->
+									<textarea name="ans" id="decbox" class="form-control1" 
+										rows="6" cols="50" placeholder="Enter Answer"></textarea>
+
+									<!------------------------- Action Input----------------------->
+									<input name="ac" type="text" id="myInput4" class="form-control1"
+										placeholder="Add Action">
+									<button id="Btn1" class="btn btn-primary me-md-6" type="submit">ADD</button>
+								</div>
+							</form>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+	</div>
+	<!-- fill drop  -->
+	<script>
+	
+	function getConfirmation() {
+	    let a=document.createElement('a');
+	// a.target='_blank';
+	a.href='/faq';
+	    // console.log(selected)
+	               var retVal = confirm("Do you want to Remove "+$(" #sel option:selected").text()+" Category?");
+	               if( retVal == true ) {
+	                 alert($(" #sel option:selected").text()+" Category Removed Succesfully");
+	                 a.click();
+	               } else {
+	                alert($(" #sel option:selected").text()+" Category Removed Operation Canceled");
+	                
+	               }
+	            }
+	
+$("category").click(function(){
+  alert("text" + $("order").text());
+});
+
+</script>
+
+
+
+
+
+	<!-------------------JS For PopUp--------------------->
+	<script>
+    
+    function myFunction11(id) {
+    	console.log(id);
+    	console.log(("#" + id));
+$("#" + id).slideToggle("slow");
+
+
+}
+</script>
+	<!-- <script>
+  $(document).ready(function(){
+    setTimeout(function(){
+      $("#mymodal").modal("show")
+    }),5000
+  });
+</script> -->
+	<script>
+        function myFunction1() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput1");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+	<script>
+        const items = document.querySelectorAll(".accordion a");
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+    </script>
+	<!-- JavaScript Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
+	<!-- <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $()
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $(".cat").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script> -->
+
+	<!-- ------------------JS For Add Category------------------- -->
+	<script>
+$(document).ready(function(){
+$("#Btn").click(function(){
+    var str = $("#myInput2").val();
+    $("#sel").append("<option>"+ str +"</option>");
+  });
+});
+
+
+</script>
+	</script>
+
+	<!------------------- Js For slide Form ---------------->
+	<script>
+    var category = document.getElementById("category");
+    var question = document.getElementById("question");
+    var answer = document.getElementById("answer");
+    var action = document.getElementById("action");
+    var Indicator = document.getElementById("Indicator");
+
+    function cat(){
+        question.style.transform = "translateX(500px)";
+        category.style.transform = "translateX(150px)";
+        Indicator.style.transform = "translateX(187px)";
+        delcat.style.transform = "translateX(150px)";
+    }
+    function que(){
+        category.style.transform = "translateX(-400px)";
+        question.style.transform = "translateX(-780px)";
+        Indicator.style.transform = "translateX(312px)";
+        delcat.style.transform = "translateX(-300px)";
+    }
+</script>
+
+	<script>
+    function drop()
+     {
+         var selected = $(" #sel1 option:selected").text();
+         console.log(selected);
+           var sel1 = document.getElementById("sel1");
+    if (selected == "Choose Question") {
+        document.getElementById("myInput3").style.display = "block";
+        console.log("none");
+    }
+    else {
+        document.getElementById("myInput3").style.display = "none";
+        console.log("block");
+    }
+     }
+</script>
+</body>
+
+</html>

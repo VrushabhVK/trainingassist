@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hiii</h1>
+	<a href="/faq">faq</a>
+	
+	
+	<table>
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Author </th>
+        </tr>
+    </thead>
+    <tbody>
+	<tr th:if="${category.empty}">
+            <td colspan="2"> No Books Available </td>
+        </tr>
+        <tr th:each="category : ${category}">
+            <td><span th:text="${category.CategoryName}"> Title </span></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
